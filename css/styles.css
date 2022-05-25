@@ -1,0 +1,410 @@
+:root {
+    scroll-behavior: smooth;
+    --fondo: 255, 255, 255;
+    --texto: rgba(38, 38, 38);
+    --color1: rgba(0, 204, 102);
+    --color2: rgba(102, 0, 204);
+    --ola: url(../img/olaDia.svg);
+}
+
+.modoOscuro {
+    --fondo: rgba(38, 38, 38);
+    --texto: rgba(255, 255, 255);
+    --color1: rgba(232, 232, 0);
+    --color2: rgb(0, 217, 255);
+    --ola: url(../img/olaNoche.svg);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+.barraNav {
+    height: 5rem;
+    width: 100%;
+    background-color: #262626e1;
+    position: fixed;
+    overflow: hidden;
+    z-index: 3;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--color1);
+    transition: 1s; 
+}
+
+.active {
+    color: var(--color1);
+    text-decoration: underline;
+}
+
+.logo {
+    color: var(--color1);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content {
+    padding-top: 6rem;
+}
+
+.intro {
+    display: table;
+    background-color: var(--fondo);
+    padding-top: 6rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.fotoPerfil {
+    padding-left: 25%;
+    padding-right: 2rem;
+    width:40%;
+}
+
+.fotoPerfil img {
+    border-radius: 10px;
+    width: auto;
+    height: 500px;
+}
+
+.bio {
+    display: table-cell; 
+    vertical-align: middle;
+    padding-left: 2rem;
+    padding-right: 20%;
+    width: 50%;
+    align-content: center;
+}
+
+.olas {
+    background-image: var(--ola);
+}
+
+.olas img {
+    vertical-align:top;
+    
+    opacity: 0;
+}
+
+th {
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color1);
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+footer div table tr th a {
+    text-decoration: none;
+    color: var(--fondo);
+}
+
+footer div table tr th p {
+    color: var(--fondo);
+}
+
+footer div table tr th a:hover {
+    color: var(--color2);
+    transition: 1.5s;
+}
+
+.copyright {
+    color: var(--fondo);
+    text-align: center;
+}
+
+/* Left contact page */
+
+.introContacto {
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario form {
+    width: 50%;
+}
+
+#nombre {
+    border-style: none;
+    border-bottom-style: dashed;
+    border-color: var(--texto);
+    background-color: var(--fondo);
+}
+
+#asunto {
+    border-style: none;
+    border-bottom-style: dashed;
+    border-color: var(--texto);
+    background-color: var(--fondo);
+}
+
+#texto {
+    border-style: none;
+    border-bottom-style: dashed;
+    border-color: var(--texto);
+    background-color: var(--fondo);
+}
+
+#boton {
+    color: var(--texto);
+    border-color: var(--texto);
+}
+
+#boton:hover {
+    background-color: var(--color1);
+    color: var(--fondo);
+    border-color: var(--texto);
+}
+
+.skills {
+    background-color: var(--fondo);
+    color: var(--texto);
+    list-style-type: none;
+    width: 80%;
+    margin: 3rem auto;
+    padding: 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.skills h1 {
+    text-align: center;
+}
+
+.skills li {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.barra {
+    background: var(--fondo);
+    display: block;
+    height: 1rem;
+    border: 1px solid ;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(var(--texto), 0.25);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.barra:hover {
+    box-shadow: 0 5px 10px rgba(var(--texto), 0.25);
+}
+
+.barra span {
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+    float: left;
+    background: linear-gradient(135deg, var(--color1)0%, var(--color2)100%);
+}
+
+.solidWorks {
+    width: 90%;
+    animation: solidWorks 2s; 
+}
+
+.rhinoceros3d {
+    width: 80%;
+    animation: rhinoceros3d 2s; 
+}
+
+.html {
+    width: 70%;
+    animation: html 2s; 
+}
+
+.inDesign {
+    width: 90%;
+    animation: inDesign 2s; 
+}
+
+@keyframes solidWorks{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes rhinoceros3d{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes inDesign{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+.introGaleria {
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.fotosytexto {
+    display: flexbox;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--fondo);
+  }
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--fondo);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--texto);
+}
+
+/*dia/noche*/
+
+.btn-group {
+    display: relative;
+    position: relative;
+  }
+  
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+}
+
+.btn-secondary {
+    background: var(--foreground);
+    color: var(--background);
+}
+
+.btn-accent {
+    background: var(--color1);
+    color: var(--fondo);
+}
+  
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--fondo) 2px solid;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.botonOscuro {
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 100;
+    color: var(--texto);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.galeria {
+    display: table;
+}
+
+.carouselBoot {
+    width: 90%;
+    z-index: 0;
+    padding-left: 5rem;
+}
+
+.carousel-item img {
+    height: 20em;
+}
+
+.galeria p {
+    display: table-cell; 
+    vertical-align: middle;
+    padding-left: 2rem;
+    padding-right: 20%;
+    width: 50%;
+    align-content: center;
+}
+
+.galeria2 {
+    display: table;
+}
+
+.carouselBoot2 {
+    width: 90%;
+    z-index: 0;
+    padding-right: 4rem;
+}
+
+.carousel-item img {
+    height: 20em;
+}
+
+.galeria2 p {
+    display: table-cell; 
+    vertical-align: middle;
+    padding-left: 6rem;
+    padding-right: 3rem;
+    width: 40%;
+    align-content: center;
+}
